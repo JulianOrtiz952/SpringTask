@@ -13,6 +13,10 @@ public class JPATaskRepositoryAdapter implements TaskRepositoryPort {
 
     private JPATaskRepository jpaTaskRepository;
 
+    public JPATaskRepositoryAdapter(JPATaskRepository jpaTaskRepository){
+        this.jpaTaskRepository=jpaTaskRepository;
+    }
+
 
     @Override
     public Task save(Task task) {

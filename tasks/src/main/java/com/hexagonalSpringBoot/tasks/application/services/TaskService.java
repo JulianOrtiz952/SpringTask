@@ -3,9 +3,12 @@ package com.hexagonalSpringBoot.tasks.application.services;
 import com.hexagonalSpringBoot.tasks.domain.models.AdditionalTaskInfo;
 import com.hexagonalSpringBoot.tasks.domain.models.Task;
 import com.hexagonalSpringBoot.tasks.domain.ports.inputs.*;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
+@Service
 
 public class TaskService implements CreateTaskUseCase, DeleteTaskUseCase, RetrieveTaskUseCase, UpdateTaskUseCase, GetAdditionalTaskUseCase {
 
