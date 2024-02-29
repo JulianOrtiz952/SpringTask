@@ -1,8 +1,8 @@
-package com.hexagonalSpringBoot.tasks.infrastructure.repositories;
+package com.hexagonalSpringBoot.tasks.infrastructure.persistences.repositories;
 
 import com.hexagonalSpringBoot.tasks.domain.models.Task;
-import com.hexagonalSpringBoot.tasks.domain.ports.outposts.TaskRepositoryPort;
-import com.hexagonalSpringBoot.tasks.infrastructure.entities.TaskEntity;
+import com.hexagonalSpringBoot.tasks.domain.ports.out.TaskRepositoryPort;
+import com.hexagonalSpringBoot.tasks.infrastructure.persistences.entities.TaskEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

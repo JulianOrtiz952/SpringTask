@@ -2,7 +2,8 @@ package com.hexagonalSpringBoot.tasks.application.services;
 
 import com.hexagonalSpringBoot.tasks.domain.models.AdditionalTaskInfo;
 import com.hexagonalSpringBoot.tasks.domain.models.Task;
-import com.hexagonalSpringBoot.tasks.domain.ports.inputs.*;
+import com.hexagonalSpringBoot.tasks.domain.ports.in.*;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -43,7 +44,10 @@ public class TaskService implements CreateTaskUseCase, DeleteTaskUseCase, Retrie
 
     @Override
     public Optional<Task> getTask(Long id) {
-        return retrieveTaskUseCase.getTask(id);
+        Optional<Task> taskOptional = retrieveTaskUseCase.getTask(id);
+        if(taskOptional.isEmpty()) throw new RuntimeException("not founded");
+        Task task = taskOptional.get();
+        return Optional.of(task);
     }
 
     @Override
@@ -53,6 +57,10 @@ public class TaskService implements CreateTaskUseCase, DeleteTaskUseCase, Retrie
 
     @Override
     public Optional<Task> updateTask(Long id, Task task) {
-        return updateTaskUseCase.updateTask(id, task);
+        Optional<Task> taskOptional = retrieveTaskUseCase.getTask(id);
+        if(taskOptional.isEmpty()) throw new RuntimeException("not founded");
+        Task taskReply = taskOptional.get();
+        updateTaskUseCase.updateTask(id, taskReply);
+        return Optional.of(taskReply);
     }
 }

@@ -1,4 +1,4 @@
-package com.hexagonalSpringBoot.tasks.domain.ports.inputs;
+package com.hexagonalSpringBoot.tasks.domain.ports.in;
 
 import com.hexagonalSpringBoot.tasks.domain.models.Task;
 

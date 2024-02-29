@@ -21,30 +21,22 @@ public class TaskController {
 
     @PostMapping("/task")
     public ResponseEntity<Task> createTask(@RequestBody Task task){
-        Task createdTask = taskService.createTask(task);
-        return ResponseEntity.ok(createdTask);
+        return ResponseEntity.ok(taskService.createTask(task));
     }
 
     @GetMapping("/task/{id}")
     public ResponseEntity<?> findTaskById(@PathVariable Long id){
-        Optional<Task> taskOptional = taskService.getTask(id);
-        if(taskOptional.isEmpty()) return ResponseEntity.notFound().build();
-        Task task = taskOptional.get();
-        return ResponseEntity.ok(task);
+        return ResponseEntity.ok(taskService.getTask(id));
     }
 
     @GetMapping("/taskgetall")
     public ResponseEntity<?> findAllTask(){
-        List<Task> taskList = taskService.getAllTask();
-        return ResponseEntity.ok(taskList);
+        return ResponseEntity.ok(taskService.getAllTask());
     }
 
     @PutMapping("/taskupdate/{id}")
     public ResponseEntity<?> update(@PathVariable Long id, @RequestBody Task task){
-        Optional<Task> taskOptional = taskService.getTask(id);
-        if(taskOptional.isEmpty()) return ResponseEntity.notFound().build();
-        Task taskReply = taskOptional.get();
-        return ResponseEntity.ok(taskService.updateTask(id, taskReply));
+        return ResponseEntity.ok(taskService.updateTask(id, task));
     }
 
     @DeleteMapping("/taskdeletebyid/{id}")

@@ -1,7 +1,6 @@
-package com.hexagonalSpringBoot.tasks.domain.ports.outposts;
+package com.hexagonalSpringBoot.tasks.domain.ports.out;
 
 import com.hexagonalSpringBoot.tasks.domain.models.Task;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;

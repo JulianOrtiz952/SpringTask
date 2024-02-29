@@ -1,8 +1,8 @@
 package com.hexagonalSpringBoot.tasks.application.usecases;
 
 import com.hexagonalSpringBoot.tasks.domain.models.Task;
-import com.hexagonalSpringBoot.tasks.domain.ports.inputs.UpdateTaskUseCase;
-import com.hexagonalSpringBoot.tasks.domain.ports.outposts.TaskRepositoryPort;
+import com.hexagonalSpringBoot.tasks.domain.ports.in.UpdateTaskUseCase;
+import com.hexagonalSpringBoot.tasks.domain.ports.out.TaskRepositoryPort;
 
 import java.util.Optional;
 

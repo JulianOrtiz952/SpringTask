@@ -1,4 +1,4 @@
-package com.hexagonalSpringBoot.tasks.domain.ports.outposts;
+package com.hexagonalSpringBoot.tasks.domain.ports.out;
 
 import com.hexagonalSpringBoot.tasks.domain.models.AdditionalTaskInfo;
 

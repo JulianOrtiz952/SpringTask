@@ -2,12 +2,11 @@ package com.hexagonalSpringBoot.tasks.infrastructure.config;
 
 import com.hexagonalSpringBoot.tasks.application.services.TaskService;
 import com.hexagonalSpringBoot.tasks.application.usecases.*;
-import com.hexagonalSpringBoot.tasks.domain.ports.inputs.GetAdditionalTaskUseCase;
-import com.hexagonalSpringBoot.tasks.domain.ports.outposts.ExternalServicesPort;
-import com.hexagonalSpringBoot.tasks.domain.ports.outposts.TaskRepositoryPort;
+import com.hexagonalSpringBoot.tasks.domain.ports.in.GetAdditionalTaskUseCase;
+import com.hexagonalSpringBoot.tasks.domain.ports.out.ExternalServicesPort;
+import com.hexagonalSpringBoot.tasks.domain.ports.out.TaskRepositoryPort;
 import com.hexagonalSpringBoot.tasks.infrastructure.adapters.ExternalServiceAdapter;
-import com.hexagonalSpringBoot.tasks.infrastructure.repositories.JPATaskRepository;
-import com.hexagonalSpringBoot.tasks.infrastructure.repositories.JPATaskRepositoryAdapter;
+import com.hexagonalSpringBoot.tasks.infrastructure.persistences.repositories.JPATaskRepositoryAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

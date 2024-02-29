@@ -1,4 +1,4 @@
-package com.hexagonalSpringBoot.tasks.infrastructure.entities;
+package com.hexagonalSpringBoot.tasks.infrastructure.persistences.entities;
 
 import com.hexagonalSpringBoot.tasks.domain.models.Task;
 import jakarta.persistence.Entity;

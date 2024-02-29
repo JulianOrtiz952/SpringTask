@@ -1,7 +1,7 @@
 package com.hexagonalSpringBoot.tasks.infrastructure.adapters;
 
 import com.hexagonalSpringBoot.tasks.domain.models.AdditionalTaskInfo;
-import com.hexagonalSpringBoot.tasks.domain.ports.outposts.ExternalServicesPort;
+import com.hexagonalSpringBoot.tasks.domain.ports.out.ExternalServicesPort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 

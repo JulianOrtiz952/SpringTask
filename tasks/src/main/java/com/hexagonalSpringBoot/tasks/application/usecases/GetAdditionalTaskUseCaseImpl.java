@@ -1,8 +1,8 @@
 package com.hexagonalSpringBoot.tasks.application.usecases;
 
 import com.hexagonalSpringBoot.tasks.domain.models.AdditionalTaskInfo;
-import com.hexagonalSpringBoot.tasks.domain.ports.inputs.GetAdditionalTaskUseCase;
-import com.hexagonalSpringBoot.tasks.domain.ports.outposts.ExternalServicesPort;
+import com.hexagonalSpringBoot.tasks.domain.ports.in.GetAdditionalTaskUseCase;
+import com.hexagonalSpringBoot.tasks.domain.ports.out.ExternalServicesPort;
 
 public class GetAdditionalTaskUseCaseImpl implements GetAdditionalTaskUseCase {
     private final ExternalServicesPort externalServicesPort;
